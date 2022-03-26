@@ -1,0 +1,74 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  @include flex-column();
+  color: white;
+  padding: 2vh;
+
+  .pesquisar {
+    width: 25vw;
+    height: 6vh;
+    border-radius: 5px;
+    padding: 1vh;
+    opacity: 0.8;
+  }
+
+  .flexContainer {
+    margin-top: 2vh;
+    background-color: rgba(255, 255, 255, 0.856);
+    color: black;
+    border-radius: 8px;
+    padding: 2vh;
+
+    .country {
+      margin: 1vh;
+      margin-bottom: 5vh;
+
+      .location {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .date {
+        font-size: 1rem;
+      }
+    }
+
+    .tempAtual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5vh;
+
+      .temp {
+        font-size: 3rem;
+      }
+    }
+
+    .weatherBox {
+      background-color: rgba(191, 196, 196, 0.555);
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-around;
+      padding: 1vh;
+
+      p {
+        margin: 1vw;
+      }
+      p:last-child {
+        font-size: 1.8rem;
+      }
+      #pBlue {
+        color: rgb(78, 78, 182);
+      }
+      #pRed {
+        color: rgb(218, 63, 63);
+      }
+    }
+  }
+}
