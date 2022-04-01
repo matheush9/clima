@@ -7,10 +7,13 @@
 .component {
   @include flex-column();
   color: white;
-  padding: 2vh;
+  width: 100vw;
+  height: 100vh;
+  padding: 3vw;
+  overflow-x: hidden;
 
   .pesquisaBox {
-    .pesquisar {
+    .pesquisar, .btnBuscar {
       width: 25vw;
       height: 6vh;
       border-radius: 5px;
@@ -19,17 +22,13 @@
     }
 
     .btnBuscar {
+      width: 10vw;
       margin-left: 1vw;
-      height: 6vh;
-      border-radius: 5px;
-      padding: 1vh;
-      opacity: 0.8;
-    } 
+    }
   }
 
-
   .flexContainer {
-    margin-top: 2vh;
+    margin-top: 5vh;
     background-color: rgba(255, 255, 255, 0.856);
     color: black;
     border-radius: 8px;
@@ -85,11 +84,7 @@
 
 @media (max-width: 600px) {
   .component {
-    width: 100vw;
-    height: 100vh;
     padding: 6vw;
-    overflow-x: hidden;
-
     .pesquisaBox {
       .pesquisar {
         width: 60vw;
@@ -98,8 +93,13 @@
       .btnBuscar {
         margin-left: 2vw;
         height: 5vh;
+        width: 20vw;
       }
     }
 
+    .flexContainer {
+      width: 80vw;
+      height: 140vw;
+    }
   }
 }
