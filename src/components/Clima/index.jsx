@@ -8,15 +8,19 @@ export default function Clima() {
 
   const search = (evt) => {
     if (evt.key === "Enter") {
-      fetch(apiUrl)
-        .then((res) => res.json())
-        .then((result) => {
-          setWeather(result);
-          setQuery("");
-          console.log(result);
-        });
+      searchC()
     }
   };
+
+  function searchC() {
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+        setQuery("");
+        console.log(result);
+      });
+  }
 
   const dataAtual = (d) => {
     const meses = [
@@ -62,6 +66,9 @@ export default function Clima() {
           value={query}
           onKeyPress={search}
         ></input>
+        <button className={styles.btnBuscar} onClick={() => searchC()}>
+          Buscar
+        </button>
       </div>
 
       {typeof weather.main != "undefined" ? (

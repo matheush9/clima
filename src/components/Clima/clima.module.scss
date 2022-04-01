@@ -1,7 +1,6 @@
 @mixin flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -10,13 +9,24 @@
   color: white;
   padding: 2vh;
 
-  .pesquisar {
-    width: 25vw;
-    height: 6vh;
-    border-radius: 5px;
-    padding: 1vh;
-    opacity: 0.8;
+  .pesquisaBox {
+    .pesquisar {
+      width: 25vw;
+      height: 6vh;
+      border-radius: 5px;
+      padding: 1vh;
+      opacity: 0.8;
+    }
+
+    .btnBuscar {
+      margin-left: 1vw;
+      height: 6vh;
+      border-radius: 5px;
+      padding: 1vh;
+      opacity: 0.8;
+    } 
   }
+
 
   .flexContainer {
     margin-top: 2vh;
@@ -70,5 +80,25 @@
         color: rgb(218, 63, 63);
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .component {
+    width: 100vw;
+    height: 100vh;
+    padding: 6vw;
+
+    .pesquisaBox {
+      .pesquisar {
+        width: 60vw;
+      }
+
+      .btnBuscar {
+        margin-left: 2vw;
+        height: 5vh;
+      }
+    }
+
   }
 }
